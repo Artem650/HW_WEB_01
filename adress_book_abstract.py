@@ -118,7 +118,6 @@ class Birthday(Field):
 
     @value.setter
     def value(self, value):
-        # Валідація формату дати
         if re.match(r"\d{2}\.\d{2}\.\d{4}$", value):
             try:
                 datetime.strptime(value, "%d.%m.%Y")
